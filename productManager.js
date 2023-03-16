@@ -27,14 +27,14 @@ class ProductManager {
     if (productFound){
       return productFound
     }else{
-      return "Not found"
+      return "No encontrado"
     }
   }
 }
 const productManager = new ProductManager();
-console.log(productManager.getProducts());
+console.log('Productos guardados: ',productManager.getProducts());
 console.log(productManager.addProduct("producto prueba","Este es un producto prueba", 200, "Sin imagen","abc123",25));
-console.log(productManager.getProducts());
+console.log('Productos guardados: ',productManager.getProducts());
 console.log(productManager.addProduct("producto prueba","Este es un producto prueba", 200, "Sin imagen","abc123",25));
-console.log(productManager.getProductById(0));
-console.log(productManager.getProductById(1));
+console.log('ProductoxId: ',productManager.getProductById(0));
+console.log('ProductoxId: ',productManager.getProductById(1));
