@@ -14,9 +14,9 @@ class ProductManager {
         code: code,
         stock: stock
       });
-      return "Producto agregado"
+      return "Product added"
     }else{
-      return "Producto repetido o faltan características"
+      return "Repeated product or items lacking"
     }
   }
   getProducts(){
@@ -27,14 +27,16 @@ class ProductManager {
     if (productFound){
       return productFound
     }else{
-      return "No encontrado"
+      return "Not found"
     }
   }
 }
 const productManager = new ProductManager();
-console.log('Productos guardados: ',productManager.getProducts());
+console.log('Product added: ',productManager.getProducts());
 console.log(productManager.addProduct("producto prueba","Este es un producto prueba", 200, "Sin imagen","abc123",25));
-console.log('Productos guardados: ',productManager.getProducts());
+console.log(productManager.addProduct("producto prueba","Este es un producto prueba", 200, "Sin imagen","abc12",25));
+console.log(productManager.addProduct("producto prueba","Este es un producto prueba", 200, "Sin imagen","abc1",25));
+console.log('Product added: ',productManager.getProducts());
 console.log(productManager.addProduct("producto prueba","Este es un producto prueba", 200, "Sin imagen","abc123",25));
-console.log('ProductoxId: ',productManager.getProductById(0));
-console.log('ProductoxId: ',productManager.getProductById(1));
+console.log('Product added by Id: ',productManager.getProductById(0));
+console.log('Product added by Id: ',productManager.getProductById(1));
