@@ -1,0 +1,22 @@
+<div>
+    <h2>Realtime productos</h2>
+    <hr>
+    
+    <div>
+        <ul id="productos">
+
+        </ul>
+    </div>
+</div>
+
+{{!-- configuracion del socket con cdn --}}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.7.1/dist/sweetalert2.all.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    console.log('socket')
+    const socket = io()
+
+    socket.on('productos', data => {
+        console.log(data)
+    })
+</script>
